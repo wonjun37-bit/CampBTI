@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>🏕️ 캠BTI 테스트</title>
+<style>
+body{font-family:sans-serif; padding:30px; max-width:700px; margin:auto;}
+h1{text-align:center;}
+.question{margin:15px 0;}
+.result{margin-top:30px; padding:20px; border:2px solid #ccc; border-radius:10px;}
+button{padding:10px 20px; font-size:16px; cursor:pointer;}
+label{display:block; margin:5px 0;}
+</style>
+</head>
+<body>
+<h1>🏕️ 캠BTI 테스트</h1>
+<p>28문항으로 알아보는 캠핑 성향! 각 문항 A/B 중 하나를 선택하세요.</p>
+
+<form id="campForm">
+
+<!-- 🧍‍♀️ S/T : 사람 스타일 -->
+<div class="question">1. 캠핑은 혼자가 제일 편하다.<br>
+  <label><input type="radio" name="q1" value="S"> A. 그렇다</label>
+  <label><input type="radio" name="q1" value="T"> B. 아니다, 여럿이 재밌다</label>
+</div>
+<div class="question">2. 불멍 시간엔 조용히 음악을 듣거나 생각하는 게 좋다.<br>
+  <label><input type="radio" name="q2" value="S"> A. 그렇다</label>
+  <label><input type="radio" name="q2" value="T"> B. 아니다, 사람들과 대화가 더 좋다</label>
+</div>
+<div class="question">3. 단체 캠핑 예약 받는 캠핑장은 이용하지 않는다.<br>
+  <label><input type="radio" name="q3" value="S"> A. 그렇다</label>
+  <label><input type="radio" name="q3" value="T"> B. 아니다, 가끔은 단체 캠핑 예약도 필요하다</label>
+</div>
+<div class="question">4. 매너 타임 시간에도 어느정도 조용한 대화는 허용된다.<br>
+  <label><input type="radio" name="q4" value="S"> A. 아니다</label>
+  <label><input type="radio" name="q4" value="T"> B. 그렇다</label>
+</div>
+<div class="question">5. 내 캠핑은 조용한 사색 시간이다.<br>
+  <label><input type="radio" name="q5" value="S"> A. 그렇다</label>
+  <label><input type="radio" name="q5" value="T"> B. 아니다, 사람들과의 추억이 중요</label>
+</div>
+<div class="question">6. 혼자라도 전혀 어색하지 않다.<br>
+  <label><input type="radio" name="q6" value="S"> A. 그렇다</label>
+  <label><input type="radio" name="q6" value="T"> B. 혼자는 심심하다</label>
+</div>
+<div class="question">7. 캠핑에서 술자리는 빠질 수 없다.<br>
+  <label><input type="radio" name="q7" value="S"> A. 아니다</label>
+  <label><input type="radio" name="q7" value="T"> B. 그렇다</label>
+</div>
+
+<!-- ⚙️ P/L : 장비 성향 -->
+<div class="question">8. 캠핑 장비는 기능이 중요하지 브랜드는 중요하지 않다.<br>
+  <label><input type="radio" name="q8" value="P"> A. 그렇다</label>
+  <label><input type="radio" name="q8" value="L"> B. 아니다, 브랜드도 중요</label>
+</div>
+<div class="question">9. 텐트는 설치가 쉬워야 한다.<br>
+  <label><input type="radio" name="q9" value="P"> A. 그렇다</label>
+  <label><input type="radio" name="q9" value="L"> B. 디자인과 감성이 더 중요</label>
+</div>
+<div class="question">10. 조명은 밝은 것이 최고다.<br>
+  <label><input type="radio" name="q10" value="P"> A. 그렇다</label>
+  <label><input type="radio" name="q10" value="L"> B. 아니다, 어떤 조명인지가 더 중요</label>
+</div>
+<div class="question">11. 장비는 오래 쓰는 게 좋다.<br>
+  <label><input type="radio" name="q11" value="P"> A. 그렇다</label>
+  <label><input type="radio" name="q11" value="L"> B. 트렌드에 맞춰 자주 바꾼다</label>
+</div>
+<div class="question">12. 컨셉이나 색상이 맞지않아 새 장비를 구매한 경험이 있다.<br>
+  <label><input type="radio" name="q12" value="P"> A. 아니다</label>
+  <label><input type="radio" name="q12" value="L"> B. 그렇다</label>
+</div>
+<div class="question">13. 장비를 구매하는 것도 캠핑의 일부다<br>
+  <label><input type="radio" name="q13" value="P"> A. 아니다</label>
+  <label><input type="radio" name="q13" value="L"> B. 그렇다, 어쩌면 캠핑 보다 더 재밌다</label>
+</div>
+<div class="question">14. 줄을 서서라도 가지고 싶은 비싼 장비가 있다.<br>
+  <label><input type="radio" name="q14" value="P"> A. 아니다</label>
+  <label><input type="radio" name="q14" value="L"> B. 그렇다</label>
+</div>
+
+<!-- 🍳 F/E : 식사 취향 -->
+<div class="question">15. 캠핑의 하이라이트는 요리다.<br>
+  <label><input type="radio" name="q15" value="F"> A. 그렇다</label>
+  <label><input type="radio" name="q15" value="E"> B. 아니다</label>
+</div>
+<div class="question">16. 캠핑 전 메뉴를 미리 계획한다.<br>
+  <label><input type="radio" name="q16" value="F"> A. 그렇다</label>
+  <label><input type="radio" name="q16" value="E"> B. 즉흥적으로 먹는다</label>
+</div>
+<div class="question">17. 그릇이나 조리도구가 메뉴 선택에 따라 바뀐다.<br>
+  <label><input type="radio" name="q17" value="F"> A. 그렇다</label>
+  <label><input type="radio" name="q17" value="E"> B. 필요하면 현지에서 해결</label>
+</div>
+<div class="question">18. 가끔은 주변 식당이나 배달도 괜찮다.<br>
+  <label><input type="radio" name="q18" value="F"> A. 아니다</label>
+  <label><input type="radio" name="q18" value="E"> B. 그렇다</label>
+</div>
+<div class="question">19. 요리 과정도 캠핑의 재미라고 생각한다.<br>
+  <label><input type="radio" name="q19" value="F"> A. 그렇다</label>
+  <label><input type="radio" name="q19" value="E"> B. 귀찮다</label>
+</div>
+<div class="question">20. 캠핑 사진 보다 요리 사진이 더 많다<br>
+  <label><input type="radio" name="q20" value="F"> A. 그렇다</label>
+  <label><input type="radio" name="q20" value="E"> B. 아니다</label>
+</div>
+<div class="question">21. 캠핑 요리는 간단한 것이 최고다.<br>
+  <label><input type="radio" name="q21" value="F"> A. 아니다</label>
+  <label><input type="radio" name="q21" value="E"> B. 그렇다</label>
+</div>
+
+<!-- 🌲 N/C : 환경 선호 -->
+<div class="question">22. 편의시설이 없거나 낡아도 괜찮다.<br>
+  <label><input type="radio" name="q22" value="N"> A. 그렇다</label>
+  <label><input type="radio" name="q22" value="C"> B. 아니다</label>
+</div>
+<div class="question">23. 벌레나 더위도 캠핑의 일부라고 생각한다.<br>
+  <label><input type="radio" name="q23" value="N"> A. 그렇다</label>
+  <label><input type="radio" name="q23" value="C"> B. 아니다, 싫다</label>
+</div>
+<div class="question">24. 오지 캠핑이 주는 자유로움이 좋다.<br>
+  <label><input type="radio" name="q24" value="N"> A. 그렇다</label>
+  <label><input type="radio" name="q24" value="C"> B. 시설 좋은 곳이 더 좋다</label>
+</div>
+<div class="question">25. 비 오는 날 캠핑도 낭만적이다.<br>
+  <label><input type="radio" name="q25" value="N"> A. 그렇다</label>
+  <label><input type="radio" name="q25" value="C"> B. 아니다, 불편하다</label>
+</div>
+<div class="question">26. 전기 없는 캠핑도 괜찮다.<br>
+  <label><input type="radio" name="q26" value="N"> A. 그렇다</label>
+  <label><input type="radio" name="q26" value="C"> B. 아니다, 전기는 필수</label>
+</div>
+<div class="question">27. 화장실이 멀어도 경치 좋으면 용서된다.<br>
+  <label><input type="radio" name="q27" value="N"> A. 그렇다</label>
+  <label><input type="radio" name="q27" value="C"> B. 아니다</label>
+</div>
+<div class="question">28. 도심 근처 캠핑장이 안전하고 좋다.<br>
+  <label><input type="radio" name="q28" value="N"> A. 아니다</label>
+  <label><input type="radio" name="q28" value="C"> B. 그렇다</label>
+</div>
+
+<button type="button" onclick="calculateResult()">결과 보기</button>
+</form>
+
+<div id="result" class="result"></div>
+
+<script>
+function calculateResult(){
+  const form = document.getElementById('campForm');
+  const answers = new FormData(form);
+  let S=0,T=0,P=0,L=0,F=0,E=0,N=0,C=0;
+
+  for(let pair of answers.entries()){
+    switch(pair[1]){
+      case 'S': S++; break;
+      case 'T': T++; break;
+      case 'P': P++; break;
+      case 'L': L++; break;
+      case 'F': F++; break;
+      case 'E': E++; break;
+      case 'N': N++; break;
+      case 'C': C++; break;
+    }
+  }
+
+  let sType = S>=T ? 'S' : 'T';
+  let pType = P>=L ? 'P' : 'L';
+  let fType = F>=E ? 'F' : 'E';
+  let nType = N>=C ? 'N' : 'C';
+
+  const code = sType + pType + fType + nType;
+
+  const descriptions = {
+  'SPFN':'고독 셰프 – 혼자 자연 속에서 요리를 즐기며, 캠핑을 힐링과 사색의 시간으로 삼는 타입입니다.',
+  'SPFC':'효율 요리러 – 혼자 최소한의 장비로 요리를 즐기고, 쾌적한 환경을 최대한 활용하며 캠핑을 효율적으로 즐깁니다.',
+  'SPEC':'도시 솔캠러 – 혼자 간단히 캠핑을 즐기며, 주로 도시 근처나 편리한 장소에서 솔로 캠핑을 즐기는 타입입니다.',
+  'SPEN':'미니멀 자연인 – 혼자 자연 속에서 간단한 식사와 힐링 중심의 캠핑을 즐기는 미니멀리스트입니다.',
+  'SLFN':'스타일 셰프 – 혼자 멋진 장비를 갖추고 요리하며 자연 속에서 감각적이고 여유 있는 캠핑을 즐깁니다.',
+  'SLFC':'힐링 캠퍼 – 감각적인 장비와 편안한 환경을 갖추고, 혼자 캠핑에서 요리와 휴식을 균형 있게 즐깁니다.',
+  'SLEN':'미니멀 솔로캠퍼 – 장비 스타일을 살리면서 간단한 식사를 중심으로 혼자 자연 속 솔로 캠핑을 즐깁니다.',
+  'SLEC':'럭셔리 캠퍼 – 혼자 장비빨을 즐기며, 편의시설과 캠핑 감성을 함께 만끽하는 타입입니다.',
+  'TPFN':'자연 떼캠러 – 단체와 함께 실용적인 장비로 요리를 즐기며, 자연 속에서 단체 캠핑의 재미를 만끽합니다.',
+  'TPFC':'가족형 캠퍼 – 단체와 함께 실용적인 장비로 쾌적하게 요리를 즐기며, 가족 중심의 캠핑을 즐기는 타입입니다.',
+  'TPEN':'효율 떼캠러 – 단체 캠핑에서 최소한의 장비로 간단식 중심으로 효율적이고 실용적으로 캠핑을 즐깁니다.',
+  'TPEC':'파워 효율 캠퍼 – 단체 캠핑에서 편리한 시설과 실용적 장비를 활용하며, 간단식 중심으로 즐기는 타입입니다.',
+  'TLFN':'자연속 인플루언서 – 단체 캠핑에서 스타일리시한 장비로 요리를 즐기며, 자연 속 캠핑의 즐거움을 추구합니다.',
+  'TLFC':'트렌디 뗴캠러 – 단체 캠핑에서 스타일 장비와 시설을 활용하여 트렌디하고 쾌적하게 캠핑을 즐깁니다.',
+  'TLEN':'자연속 뺵패커 – 단체 캠핑에서 감각적인 장비로 자연 속 간단식 중심의 캠핑을 즐기는 타입입니다.',
+  'TLEC':'인스타 글램퍼 – 단체 글램핑에서 간편식과 감각적 시설을 활용하며, SNS 감성 캠핑을 즐기는 타입입니다.'
+};
+
+  document.getElementById('result').innerHTML = `<h2>당신의 캠BTI 유형: ${code}</h2><p>${descriptions[code] || '자세한 유형 설명은 준비중입니다.'}</p>`;
+}
+</script>
+</body>
+</html>
